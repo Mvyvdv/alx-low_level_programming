@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-/*
- * main - Entery Point
- * 
- * Return : Always 0 (success)
+/**
+ * main - Entry point
+ *
+ * Description: 'Hello, puts'
+ *
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -12,4 +14,3 @@ int main(void)
 	return (0);
 
 }
-

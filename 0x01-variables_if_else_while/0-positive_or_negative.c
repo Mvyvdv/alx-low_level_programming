@@ -25,6 +25,5 @@ int main(void)
 	{
 		printf("%d is nagative\n", n);
 	}
-
 	return (0);
 }

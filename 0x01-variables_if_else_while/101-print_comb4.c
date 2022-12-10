@@ -2,34 +2,35 @@
 #include <stdlib.h>
 
 /**
- * main - returns a combination of number
- * Return: return 0 if successful
+ * main - prints all possible different combinations of three digits
+ * Return: return 0 
  */
 int main(void)
 {
-	int i, j;
+	int ones = '0';
+	int tens = '0';
+	int hundreds = '0';
 
-	for (i = 0; i < 100; i++)
+	for (hundreds = '0'; hundreds < '9'; hundreds++)
 	{
-		for (j = 0; j < 100; j++)
+		for (tens = '0'; tens <= '9'; tens++)
 		{
-			if (i < j)
+			for (ones = '0'; ones <= '9'; ones++)
 			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
-				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i != 98 || j != 99)
+				if (!((ones == tens) || (tens == hundreds) || (tens > ones) || (hundreds > tens)))
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(hundreds);
+					putchar(tens);
+					putchar(ones);
+					if (!(ones == '9' && hundreds == '7' && tens == '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }

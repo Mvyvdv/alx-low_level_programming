@@ -6,6 +6,7 @@
  * @n: the provided value by the user
  * Return: Always 0
  */
+
 void print_times_table(int n)
 {
 	int row;

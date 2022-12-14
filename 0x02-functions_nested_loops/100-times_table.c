@@ -17,26 +17,32 @@ void print_times_table(int n)
 		return;
 	for (row = 0; row <= n; row++)
 	{
-		for (col = 0; col <= n; col++)
+		for (column = 0; column <= n; column++)
 		{
-			prod = (row * col);
-			if (col == 0)
-				_putchar('0' + prod);
+			product = (row * column);
+			if (column == 0)
+				_putchar('0' + product);
 			else
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (prod <= 9)
+				if (product <= 9)
 				{
 					_putchar(' ');
 					_putchar(' ');
-					_putchar('0' + prod);
+					_putchar('0' + product);
 				}
-				else if (prod >= 100)
+				else if (product > 9 && product < 100)
 				{
-					_putchar('0' + (prod / 100));
-					_putchar('0' + ((prod / 10) % 10));
-					_putchar('0' + (prod % 100));
+					_putchar(' ');
+					_putchar('0' + (product / 10));
+					_putchar('0' + (product % 10));
+				}
+				else if (product >= 100)
+				{
+					_putchar('0' + (product / 100));
+					_putchar('0' + ((product / 10) % 10));
+					_putchar('0' + (product % 10));
 				}
 			}
 		}

@@ -6,8 +6,6 @@
  * @n: the provided value by the user
  * Return: Always 0
  */
-int main()
-{
 
 void print_times_table(int n)
 
@@ -51,5 +49,4 @@ void print_times_table(int n)
 		}
 		_putchar('\n');
 	}
-}
 }

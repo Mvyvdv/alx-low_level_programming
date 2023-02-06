@@ -8,7 +8,7 @@
  */
 void error_file(int file_from, int file_to, char *argv[])
 {
-	if (file_form == -1)
+	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(98);
